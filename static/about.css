@@ -1,0 +1,24 @@
+body{
+    background-image: url(/static/bg.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+h1{
+    text-align: center;
+}
+.about{
+    display: flex;
+     margin-left: 10rem;
+    /* margin-bottom: 500px; */
+}
+p{
+ 
+}
+.anku{
+    margin-left: 400px;
+}
+.anku div{
+    /* text-align: center; */
+}
