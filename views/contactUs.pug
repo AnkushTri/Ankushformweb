@@ -7,21 +7,33 @@
     <title>Countact us</title>
     style
        include ../static/contactUs.css
+       include ../static/styl.css
 </head>
 <body>
+    <header>
+        <div class="container">
+            <!-- <img src="D:\htmlcoding/code.jpg" class="nav" id="img" > -->
+            <div  id="cout">  <img src="/static\com.jpg" id="img" ></div>
+            <div class="nav" id="cout-1"><a href="/">Home</a> </div>
+            <div class="nav" id="cout-2"><a href="/about">About</a></div>
+            <div class="nav" id="cout-3"><a href="/service">Services</a> </div>
+            <div class="nav" id="cout-4"><a href="/contactUs">ContactUs</a></div>
+            <!-- <div  id="cout-5">
+                <div><input type="text" placeholder="search"></div>
+            </div> -->
+           
+        </div>
+       
+    </header>
     h2=message
     <h1>How can we help you</h1>
-    <div id="con">
-        our contact number:7050260451
-    </div>
-    <div id="email">
-        our email No:learprogram@123gmail.com
-    </div>
+       <p id="con">contact number:7050260451</p> 
+       <p  id="email">Email:kuamrankush13701@gmail.com</p> 
      
     <form action="/contactUs" method="post" id="contact" class="form">
         <h3>Put your suggetion or ask any question </h3>
         <div>
-            <textarea name="textarea" id="textarea" cols="30" rows="15"></textarea>
+            <textarea name="textarea" id="textarea" cols="30" rows="15" required ></textarea>
         </div>
         <div><button>submitQuery</button></div>
     </form>

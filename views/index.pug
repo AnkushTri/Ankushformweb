@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <title>Document</title -->
-        <title>#{title}</title>
-        style
-            include ../static/styl.css
-        <script src="../static/index.js" defer></script>
+    <title>#{title}</title>
+    style
+        include ../static/style.css
+        include ../static/styl.css
+    <script src="../static/index.js"></script>
 </head>
+
 <body>
     h2=message
     <header>
         <div class="container">
             <!-- <img src="D:\htmlcoding/code.jpg" class="nav" id="img" > -->
-            <div class="nav" id="cout">  <img src="/static\com.jpg" height=50px class="nav" id="img" ></div>
+            <div id="cout"> <img src="/static\com.jpg" id="img"></div>
             <div class="nav" id="cout-1"><a href="/">Home</a> </div>
             <div class="nav" id="cout-2"><a href="/about">About</a></div>
             <div class="nav" id="cout-3"><a href="/service">Services</a> </div>
@@ -23,50 +26,58 @@
             <!-- <div  id="cout-5">
                 <div><input type="text" placeholder="search"></div>
             </div> -->
-           
+
         </div>
-       
+
     </header>
 
     <h1 class="text">This is the best codding platform you can learn any of programming language</h1>
     <h2 id="own">By:Ankush kumar</h2>
     <h3>Fill the form to registaration</h3>
     <div class="formclasses">
-        <form action="/" method="post" id="contact">
+        <form name="myform" action="/" method="post" onsubmit="return validateform()" id="contact">
             <div class="level">
                 <label for="name" class="norms"> Name:</label>
-                <!-- <input type="name" id="name" placeholder="enter your name"> -->
-                <input type="text" name="name" id="name" placeholder="enter your name">
+                <input type="text" name="name" id="name" placeholder="enter your name" required>
             </div>
             <div class="level">
                 <label for="age" class="norms"> Age:</label>
                 <!-- <input type="MyRoll" id="roll" placeholder="enter your Roll"> -->
-                <input type="number" name="age" id="age" placeholder="enter your age">
+                <input type="number" name="age" id="age" placeholder="enter your age" required>
             </div>
             <div class="level">
                 <label for="email" class="norms"> Email:</label>
-                <input type="email" name="email" id="email" placeholder="enter your email">
+                <input type="email" name="email" id="email" placeholder="enter your email" required>
             </div>
-            <div class="level">
+            <!-- <div class="level">
                 <label for="gender" class="norms">Gender: </label> 
-                <input type="text" name="gender" id="gender" placeholder="enter your gender">
-            </div>
+                <input type="text" name="gender" id="gender" placeholder="enter your gender" required>
+            </div> -->
             <!-- <div class="level">
                <label for="">Date of Birth:</label>  
                <input type="date" name="date" id="date">
             </div> -->
             <div class="level">
                 <label for="class" class="norms"> School/college:</label>
-                <input type="Myname" name="institude" id="institude" placeholder="enter your school/college">
+                <input type="Myname" name="institude" id="institude" placeholder="enter your school/college" required>
             </div>
             <div class="level" id="desc">
-                <div>Write about related to course:</div> <textarea name="mytext" id="mytext" cols="70" rows="10"></textarea>
+                <div>Write about related to course:</div>
+                <div>
+                    <textarea name="mytext" id="mytext" cols="70" rows="10"></textarea>
+                </div>
             </div>
-            
-            <div class="button" >
-                <input type="submit" value="submit now" onclick="submi()" id="sub"> <input type="reset" value="reset now" id="res">
+            <div class="button">
+                <div class="submit">
+                    <input type="submit" value="submit now" id="sub">
+                    <input type="reset" value="reset now" id="res">
+                </div>
             </div>
         </form>
     </div>
+    <div id="copy">
+        <p style="color: black;">@All copyrights are reserved by Ankush</p>
+    </div>
 </body>
+
 </html>

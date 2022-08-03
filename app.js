@@ -1,34 +1,34 @@
-const express=require("express");
-const fs= require("fs");
-const path=require("path");
-const app=express();
-var mongoose=require('mongoose');
+const express = require("express");
+const fs = require("fs");
+const path = require("path");
+const app = express();
+var mongoose = require('mongoose');
 // const bodyparser=require("body-parser");
-mongoose.connect('mongodb://localhost/index',{useNewUrlParser:true})
+mongoose.connect('mongodb://localhost/index', { useNewUrlParser: true })
 // mongoose.connect('mongodb://localhost/index/contactUs',{useNewUrlParser:true}) //for contact us
-const port=80
+const port = 80
 //Define mongo schema
-var formSchema=new mongoose.Schema({
-    name:String,
-    email:String,
-    age:String,
-    gender:String,
-    institude:String,
-    mytext:String
+var formSchema = new mongoose.Schema({
+    name: String,
+    email: String,
+    age: String,
+    gender: String,
+    institude: String,
+    mytext: String
 });
-var constactSchema=new mongoose.Schema({
-    textarea:String
+var constactSchema = new mongoose.Schema({
+    textarea: String
 });
-var Form=mongoose.model('Form',formSchema);
-var Contact=mongoose.model('Contact',constactSchema);
+var Form = mongoose.model('Form', formSchema);
+var Contact = mongoose.model('Contact', constactSchema);
 
 //For saving static file
 app.use('/static', express.static('static'))
 app.use(express.urlencoded())
 //Set the template as pug
-app.set('view engine','pug')
+app.set('view engine', 'pug')
 //Set the view directory
-app.set('views',path.join(__dirname,'views'))
+app.set('views', path.join(__dirname, 'views'))
 
 //Our pug demo endpoint
 // app.get('/demo',(req,res)=>{
@@ -41,20 +41,21 @@ app.set('views',path.join(__dirname,'views'))
 // app.get("/",(req,llores)=>{
 //     res.send("this is my first app's home page");
 // });
-app.get('/index',(req,res)=>{
-    res.status(200).render('index',{title:'LearnProgrammingWithAnkush'});
+
+app.get('/index', (req, res) => {
+    res.status(200).render('index', { title: 'LearnProgrammingWithAnkush' });
 });
-app.get("/",(req,res)=>{
-    res.status(200).render('index',{title:'LearnProgrammingWithAnkush'});
+app.get("/", (req, res) => {
+    res.status(200).render('index', { title: 'LearnProgrammingWithAnkush' });
 });
-app.get("/about",(req,res)=>{
+app.get("/about", (req, res) => {
     res.status(200).render('about');
 });
-app.get("/contactUs",(req,res)=>{
+app.get("/contactUs", (req, res) => {
     // res.send("this is my first app's get req about page");
     res.status(200).render('contactUs');
 });
-app.get("/service",(req,res)=>{
+app.get("/service", (req, res) => {
     // res.send("this is my first app's get req about page");
     res.status(200).render('service');
 });
@@ -74,16 +75,15 @@ app.get("/service",(req,res)=>{
 //     res.status(200).render('index.pug',params);
 // })
 
-app.post("/",(req,res)=>{
-   var myData=new Form (req.body);
-   myData.save().then(()=>{
-    //   res.status(200).send("Your form have been submitted successfully") 
-    // const params={'message':'your form have submitted succusesfully'}
-    // res.status(200).render('index.pug',params);
-    res.status(200).render('index.pug');
-   }).catch(()=>{
-       res.status(404).send("item has been not send");
-   })
+app.post("/", (req, res) => {
+    var myData = new Form(req.body);
+    myData.save().then(() => {
+        // res.status(200).render('index.pug',params);
+        res.status(200).render('index.pug');
+       
+    }).catch(() => {
+        res.status(404).send("item has been not send");
+    })
 })
 //for post contact 
 // app.post("/contactUs",(req,res)=>{
@@ -95,15 +95,15 @@ app.post("/",(req,res)=>{
 //     res.status(200).render('contactUs.pug',param);
 // })
 
-app.post("/contactUs",(req,res)=>{
-    var myData=new Contact (req.body);
-    myData.save().then(()=>{
-       res.status(200).send("Your quey/suggestion have been submitted successfully")
-    }).catch(()=>{
+app.post("/contactUs", (req, res) => {
+    var myData = new Contact(req.body);
+    myData.save().then(() => {
+        res.status(200).send("Your quey/suggestion have been submitted successfully")
+    }).catch(() => {
         res.status(404).send("item has been not send");
     })
- })
+})
 //start the sever
-app.listen(port,()=>{
+app.listen(port, () => {
     console.log(`This appplication listening at port ${port}`);
 });

@@ -3,8 +3,10 @@ body{
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
+    overflow: hidden;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+ 
 h1{
     text-align: center;
 }
@@ -13,12 +15,16 @@ h1{
      margin-left: 10rem;
     /* margin-bottom: 500px; */
 }
-p{
- 
+pre{
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
 }
 .anku{
     margin-left: 400px;
 }
-.anku div{
-    /* text-align: center; */
+
+.img{
+    width: 12rem;
+    height: 12rem;
+    margin-right:5rem ;
 }

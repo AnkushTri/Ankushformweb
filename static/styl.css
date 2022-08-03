@@ -2,204 +2,43 @@
     margin: 0px;
     padding: 0px;
 }
-body {
-    /* background-image:url('D:\htmlcoding/code.jpg');*/
-    /* background-repeat: no-repeat; */
-    /* background-size: cover; */
-    /* height: 100rem; */
-    /* opacity: 0.3; */
-    /* width: 100%;  */
-}
-
-header ::before {
-    background-image: url('/static/code.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    scroll-padding-inline: none;
-    content: "";
-    /* height: 100rem; */
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    opacity: 0.1;
-
-}
-
 .container {
-    /* width: 100%; */
-    /* height:330pc; */
     display: flex;
     flex-wrap: wrap;
-    /* flex-direction: row; */
     align-content: center;
     justify-content: center;
-    /* margin-top: 10px; */
-    /* margin: auto; */
-     padding-right: 300px; */
-    /* background-color: rgb(37, 35, 35); */
-    /* margin-right: 100px; */
+    padding-right:18rem ; 
+    margin-right: 1rem;
 }
 
 .nav {
-    /* background-color: sienna; */
     display: flex;
     display: block;
-    /* border: 2px solid rgb(162, 123, 123); */
-    margin: 2px 5px;
-    padding: 2px 35px;
-    width: 100px;
+    margin: 2px 10px;
+    padding: 0.1rem 1rem;
+    padding-left: 2rem;
+    width: 6.5rem;
     color: rgb(51, 42, 51);
-    font-size: 20px;
+    font-size: 1.3rem;
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
-
-#cout-5 {
-    align-self: flex-end;
-    margin-left: 200px;
-    margin-top: 5px;
-    color: rgb(23, 25, 20);
-    border: 2px solid rgb(10, 12, 11);
-    width:max;
-    /* height:200px; */
-    /* padding-bottom: 2px; */
-    text-align: center;
-    
-/* flex-wrap: wrap; */
-}
 #cout{
-   
-    padding-bottom: 10px;
-    height: 10px;
-    width: 20px;
-    align-self:flex-start;
-    /* float:left; */
-    margin-right: 400px;
-    margin-bottom: 5px;
-}
-
-.formclasses {
-    /* margin:40px 0px; */
-    width: 100%;
-    font-size: 2rem;
-}
-
-.norms {
-    /* border: 2px solid black; */
-    /* padding-top:10px;
-    text-align: center; */
-
-}
-
-
-/* #institude{
-    padding-top:10px;
-    text-align: center;
-} */
-
-
-/* #botton{
-    border-radius: 8px;
-} */
-h1 {
-    margin-top: 1.4rem;
-    color: rgb(171, 14, 9);
-    text-align: center;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-h2{
-    margin-top:1rem;
-    color: rgb(139, 56, 0);
-    text-align: right;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-
-h3{
-    text-align: center;
-    margin:1.5rem 0rem;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 25px;
-    color: rgb(47, 196, 89);
-}
-/* .container a{
-    list-style: none;
-} */
-a{
+     padding-bottom: 10px;
+     width: 200px;
+     margin-right:1rem;
+     margin-bottom: 5px;
+ }
+ #img{
+     margin-right: 3rem;
+     height: 3rem;
+     width: 7rem;
+ }
+ a{
     text-decoration: none;
     color: rgb(17, 15, 15);
 }
 a:hover{
     background-color: rgb(127, 115, 115);
     color: aqua;
-}
-.level {
-    /* background-image:url('D:\htmlcoding/anki.jpg') ; */
-    /* margin-top: 30px; */
-    /* border: 2px solid burlywood; */
-    margin:0.7rem;
-    text-align: center;
-    height: 30px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 15px;
-    justify-content: center;
-}
-input{
-    background-color: rgb(187, 180, 180);
-    cursor: pointer;
-    size: 1rem;
-    width: 40%;
-    height: 1.5rem;
-    text-align: center;
-    
-}
-input:hover{
-    background-color: rgb(172, 182, 181);
-   
-}
-#desc {
-
-    height: 200px;
-/* background-color: rgb(150, 213, 220); */
-    /* width: 30%; */
-}
-textarea{
-    background-color: rgb(247, 253, 253);
-    text-align: center;
-    align-items: center;
-    margin: auto;
-    justify-content: center;
-}
-textarea:hover{
-    /* cursor: pointer; */
-    background-color: rgb(186, 199, 196);
-   
-}
-.button{
-    /* background-color: rgb(102, 66, 135) */
-    /* color: rgb(216, 8, 147);
-    padding:0px 4px; */
-    margin:auto;
-    text-align: center;
-    align-items: center;
-    width: 15rem;
-    height: 1.5rem;
-    padding: 0px 5px;
-   
-}
-#sub{
-    border: solid black 1px;
-    border-radius: 4px;
-    margin:0px 10px;
-    background-color: rgb(165, 27, 101);
-}
-#res{
-    border: solid black 1px;
-    border-radius: 5px;
-    margin:0px 10px;
-    background-color: blueviolet;
-}
+} 
